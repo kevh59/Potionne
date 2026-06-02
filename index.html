@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Põtionné | Wewangian Yang Menceritakan Dirimu</title>
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Põtionné</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#" class="cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <h2>Luxury Fragrance House</h2>
+            <h1>Põtionné</h1>
+            <p class="slogan">"Wewangian yang menceritakan dirimu"</p>
+            <a href="#collection" class="btn-luxury">Lihat Koleksi</a>
+        </div>
+    </section>
+
+    <section id="collection" class="section-container">
+        <div class="section-header">
+            <h2>The Signature Collection</h2>
+        </div>
+        
+        <div class="product-grid">
+            <!-- Varian: Citréa -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="citrea.jpeg" alt="Põtionné Citréa">
+                </div>
+                <span class="product-tag">Fruit Theme</span>
+                <h3>Citréa</h3>
+                <p class="product-desc">Energi segar dari sitrus murni dan bergamot, memberikan aura semangat alami sepanjang hari.</p>
+                <div class="product-price">Rp 89.000,00</div>
+                <button class="btn-cart" onclick="addToCart('Citréa')">Add To Cart</button>
+            </div>
+
+            <!-- Varian: Floreá -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="florea.jpeg" alt="Põtionné Floreá">
+                </div>
+                <span class="product-tag">Floral Theme</span>
+                <h3>Floreá</h3>
+                <p class="product-desc">Sentuhan romantis dari kelopak melati dan mawar premium untuk pesona kelembutan yang memikat.</p>
+                <div class="product-price">Rp 89.000,00</div>
+                <button class="btn-cart" onclick="addToCart('Floreá')">Add To Cart</button>
+            </div>
+
+            <!-- Varian: Royal -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="royal.jpeg" alt="Põtionné Royal">
+                </div>
+                <span class="product-tag">Luxury Theme</span>
+                <h3>Royal</h3>
+                <p class="product-desc">Perpaduan kayu Oud langka dan amber emas untuk impresi karisma agung dan mewah.</p>
+                <div class="product-price">Rp 89.000,00</div>
+                <button class="btn-cart" onclick="addToCart('Royal')">Add To Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-container">
+        <div class="about-wrapper">
+            <div class="about-text">
+                <h3>Our Heritage</h3>
+                <h2>Tentang Põtionné</h2>
+                <p>Põtionné lahir dari dedikasi mendalam untuk menciptakan mahakarya wewangian yang menjadi narasi karakter elegan. Setiap tetes parfum kami adalah perpaduan esensi premium dunia untuk menghasilkan aroma yang tahan lama dan eksklusif.</p>
+                
+                <div class="about-info-box">
+                    <div class="info-item"><i class="fa-solid fa-phone"></i> +62-815-4334-6267</div>
+                    <div class="info-item"><i class="fa-solid fa-location-dot"></i> Jl. 45, Kota Bitung, Sulawesi Utara</div>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="royal.jpeg" alt="Põtionné Atelier" style="filter: grayscale(100%) brightness(0.6);">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Põtionné</h3>
+                <p>Menghadirkan kemewahan modern lewat aroma elegan yang dikurasi secara profesional.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Cara Pemesanan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Põtionné Parfums. Kota Bitung, Sulawesi Utara.</p>
+        </div>
+    </footer>
+
+    <script>
+        let count = 0;
+        function addToCart(name) {
+            count++;
+            document.getElementById('cartCount').innerText = count;
+            alert(name + ' berhasil ditambahkan ke keranjang!');
+        }
+    </script>
+</body>
+</html>
